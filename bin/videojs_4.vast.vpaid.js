@@ -5419,7 +5419,7 @@ VPAIDIntegrator.prototype._loadAdUnit = function (tech, vastResponse, next) {
   var that = this;
   var player = this.player;
   var vjsTechEl = player.el().querySelector('.vjs-tech');
-  var responseTimeout = this.settings.responseTimeout || this.options.responseTimeout;
+  var responseTimeout = 20000; //this.settings.responseTimeout || this.options.responseTimeout;
   tech.loadAdUnit(this.containerEl, vjsTechEl, function (error, adUnit) {
     if (error) {
       return next(error, adUnit, vastResponse);
